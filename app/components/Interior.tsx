@@ -8,7 +8,7 @@ function InteriorAction({ action, secondary = false }: { action: Action; seconda
   const content = <>{action.label} <span aria-hidden="true">{action.href.startsWith("mailto:") ? "↗" : "→"}</span></>;
   return action.href.startsWith("mailto:")
     ? <a className={className} href={action.href}>{content}</a>
-    : <Link className={className} href={action.href}>{content}</Link>;
+    : <Link className={className} href={action.href} prefetch={false}>{content}</Link>;
 }
 
 export function InteriorHero({ eyebrow, title, deck, primary, secondary, markers = [] }: {
@@ -70,7 +70,7 @@ export function InteriorCard({ number, title, text, href, action }: {
     <p>{text}</p>
     {action && <b>{action} <span aria-hidden="true">→</span></b>}
   </>;
-  return href ? <Link className="interior-card" href={href}>{content}</Link> : <article className="interior-card">{content}</article>;
+  return href ? <Link className="interior-card" href={href} prefetch={false}>{content}</Link> : <article className="interior-card">{content}</article>;
 }
 
 export function InteriorCta({ eyebrow, title, text, action }: {
