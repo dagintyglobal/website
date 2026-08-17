@@ -11,17 +11,17 @@ const layers = [
   {
     number: "01",
     title: "Data wellness",
-    text: "Help people understand personal-data exposure, take practical cleanup actions, build healthier habits, and retain control of their information.",
+    text: "Build practical habits that help people understand, protect, and take control of their personal data.",
   },
   {
     number: "02",
-    title: "Partner delivery",
-    text: "Enable MSPs to deliver a recurring managed service and benefits brokers to offer a practical employee benefit through the client relationships they already lead.",
+    title: "Threat reduction",
+    text: "Use personal data wellness to give employers and their trusted partners a measurable way to lower human-driven risk.",
   },
   {
     number: "03",
     title: "Data infrastructure",
-    text: "Create accountable personal-data relationships built around ownership, explicit consent, provenance, and a receipt for every data point.",
+    text: "Give data buyers trusted personal data backed by consent, provenance, accountability, and a receipt for every data point.",
   },
 ];
 

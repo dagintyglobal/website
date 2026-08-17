@@ -247,7 +247,7 @@ a { color: inherit; text-decoration: none; }
   line-height: 0.9;
   text-transform: uppercase;
 }
-.home-hero-stats p { margin: 10px 0 0; color: #b9c5d8; font-size: 13px; line-height: 1.4; }
+.home-hero-stats p { margin: 10px 0 0; color: #b9c5d8; font-size: 14px; line-height: 1.4; }
 .home-hero-stats .home-hero-stat--platform > span,
 .home-hero-stats .home-hero-stat--platform > strong { color: var(--blue); }
 .home-hero-stats .home-hero-stat--platform p { color: #263a60; }

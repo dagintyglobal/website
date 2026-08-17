@@ -7,7 +7,7 @@ const roles = [
   { number: "02", title: "Executive / Employer", text: "Connect employee data wellness to measurable threat reduction, expected-loss modeling, and governance-ready reporting.", href: "/products", action: "Explore products" },
   { number: "03", title: "MSP", text: "Turn employee data wellness into a recurring security service with measurable threat-reduction reporting.", href: "/partners/msps", action: "Explore MSP delivery" },
   { number: "04", title: "Benefit broker", text: "Add a consent-forward data wellness benefit that strengthens employee habits and reduces personal-data exposure.", href: "/partners/benefits-brokers", action: "Explore broker delivery" },
-  { number: "05", title: "Transformation Leader", text: "Translate complex data and consent challenges into clear positioning, adoption strategy, and measurable action.", href: "/services", action: "Explore services" },
+  { number: "05", title: "B2B Marketer", text: "Translate complex data and consent challenges into clear positioning, adoption strategy, and measurable action.", href: "/services", action: "Explore services" },
   { number: "06", title: "Journalist / Researcher", text: "Examine the whitepaper, cited sources, and assumptions behind the data wellness risk model.", href: "/research?view=whitepaper", action: "Explore research" },
 ];
 
