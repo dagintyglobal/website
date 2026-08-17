@@ -1,6 +1,5 @@
 "use client";
 
-import Link from "next/link";
 import { useEffect, useState } from "react";
 import { contact } from "../site-data";
 
@@ -43,14 +42,14 @@ export function SiteHeader({ dark = false, stickThreshold = 8 }: { dark?: boolea
 
   return (
     <header className={`global-header ${dark ? "global-header--dark" : ""} ${scrolled ? "global-header--stuck" : ""}`}>
-      <Link className="global-brand" href="/" aria-label="Dāginty home" prefetch={false}>
+      <a className="global-brand" href="/" aria-label="Dāginty home">
         <img src={dark ? "/brand/daginty/wordmark-white-yellow.svg" : "/brand/daginty/wordmark-full-color.svg"} alt="Dāginty" />
-      </Link>
+      </a>
       <button className="menu-button" type="button" aria-expanded={open} aria-controls="primary-nav" onClick={() => setOpen(!open)}>
         {open ? "Close" : "Menu"}
       </button>
       <nav id="primary-nav" className={open ? "is-open" : ""} aria-label="Primary navigation">
-        {nav.map((item) => <Link href={item.href} key={item.href} onClick={() => setOpen(false)} prefetch={false}>{item.label}</Link>)}
+        {nav.map((item) => <a href={item.href} key={item.href} onClick={() => setOpen(false)}>{item.label}</a>)}
         <a className="nav-button" href={contact.expert}>Talk to an expert <span aria-hidden="true">↗</span></a>
       </nav>
     </header>
@@ -61,9 +60,9 @@ export function SiteFooter() {
   return (
     <footer className="global-footer">
       <div className="footer-grid">
-        <div><span>Explore</span><Link href="/products" prefetch={false}>Products</Link><Link href="/partners" prefetch={false}>Partners</Link><Link href="/services" prefetch={false}>Services</Link></div>
-        <div><span>Learn</span><Link href="/data-wellness" prefetch={false}>Data Wellness</Link><Link href="/ecosystem" prefetch={false}>Ecosystem</Link><Link href="/research" prefetch={false}>Research Lab</Link></div>
-        <div><span>Company</span><Link href="/about" prefetch={false}>About</Link><Link href="/legal" prefetch={false}>Legal</Link><Link href="/contact" prefetch={false}>Contact</Link></div>
+        <div><span>Explore</span><a href="/products">Products</a><a href="/partners">Partners</a><a href="/services">Services</a></div>
+        <div><span>Learn</span><a href="/data-wellness">Data Wellness</a><a href="/ecosystem">Ecosystem</a><a href="/research">Research Lab</a></div>
+        <div><span>Company</span><a href="/about">About</a><a href="/legal">Legal</a><a href="/contact">Contact</a></div>
       </div>
       <div className="footer-lead">
         <img src="/brand/daginty/wordmark-white-yellow.svg" alt="Dāginty" />
@@ -72,8 +71,8 @@ export function SiteFooter() {
       <div className="footer-legal">
         <span>© 2026 Dāginty Inc.</span>
         <span aria-hidden="true">|</span>
-        <Link href="/privacy" prefetch={false}>Privacy Policy</Link>
-        <Link href="/terms" prefetch={false}>Terms of use</Link>
+        <a href="/privacy">Privacy Policy</a>
+        <a href="/terms">Terms of use</a>
       </div>
     </footer>
   );

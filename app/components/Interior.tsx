@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { Eyebrow } from "./Blocks";
 
 type Action = { label: string; href: string };
@@ -6,9 +5,7 @@ type Action = { label: string; href: string };
 function InteriorAction({ action, secondary = false }: { action: Action; secondary?: boolean }) {
   const className = secondary ? "interior-text-link" : "interior-button";
   const content = <>{action.label} <span aria-hidden="true">{action.href.startsWith("mailto:") ? "↗" : "→"}</span></>;
-  return action.href.startsWith("mailto:")
-    ? <a className={className} href={action.href}>{content}</a>
-    : <Link className={className} href={action.href} prefetch={false}>{content}</Link>;
+  return <a className={className} href={action.href}>{content}</a>;
 }
 
 export function InteriorHero({ eyebrow, title, deck, primary, secondary, markers = [] }: {
@@ -70,7 +67,7 @@ export function InteriorCard({ number, title, text, href, action }: {
     <p>{text}</p>
     {action && <b>{action} <span aria-hidden="true">→</span></b>}
   </>;
-  return href ? <Link className="interior-card" href={href} prefetch={false}>{content}</Link> : <article className="interior-card">{content}</article>;
+  return href ? <a className="interior-card" href={href}>{content}</a> : <article className="interior-card">{content}</article>;
 }
 
 export function InteriorCta({ eyebrow, title, text, action }: {
