@@ -1,40 +1,26 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { headers } from "next/headers";
+import { Geist, Geist_Mono, Inter } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
+const inter=Inter({variable:"--font-sans",subsets:["latin"]});
+const geist=Geist({variable:"--font-interior-sans",subsets:["latin"]});
+const geistMono=Geist_Mono({variable:"--font-interior-mono",subsets:["latin"]});
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
-
-export const metadata: Metadata = {
-  title: "Dāginty | Staging",
-  description: "The staging environment for the new Dāginty ecosystem website.",
-  robots: {
-    index: false,
-    follow: false,
-  },
-  icons: {
-    icon: "/favicon.svg",
-    shortcut: "/favicon.svg",
-  },
-};
-
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
-  return (
-    <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        {children}
-      </body>
-    </html>
-  );
+export async function generateMetadata():Promise<Metadata>{
+  const requestHeaders=await headers();
+  const host=requestHeaders.get("x-forwarded-host")??requestHeaders.get("host")??"staging.cluzydatawellness.com";
+  const protocol=requestHeaders.get("x-forwarded-proto")??(host.startsWith("localhost")?"http":"https");
+  const socialImage=`${protocol}://${host}/og.png`;
+  const description="Dāginty provides personal data control for the AI economy, connecting people, organizations, and trusted partners through consent, provenance, and measurable data wellness.";
+  return {
+    title:{default:"Dāginty | Personal Data Control for the AI Economy",template:"%s"},
+    description,
+    robots:{index:false,follow:false},
+    icons:{icon:"/favicon.svg",shortcut:"/favicon.svg"},
+    openGraph:{title:"Personal data control for the AI economy",description,type:"website",images:[{url:socialImage,width:1200,height:630,alt:"Dāginty — Personal data control for the AI economy"}]},
+    twitter:{card:"summary_large_image",title:"Personal data control for the AI economy",description,images:[socialImage]},
+  };
 }
+
+export default function RootLayout({children}:{children:React.ReactNode}){return <html lang="en"><body className={`${inter.variable} ${geist.variable} ${geistMono.variable}`}>{children}</body></html>}
