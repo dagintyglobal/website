@@ -496,7 +496,7 @@ function Calculator() {
           <div className="pricing-note">
             <span>PLATFORM PRICING</span>
             <strong>$160 per employee / year</strong>
-            <p>The employer-funded stipend is separate from platform cost.</p>
+            <p>The employer-funded benefits stipend is separate from platform cost.</p>
             <div className="blended-cost-model">
               <div className={`cost-model-toggle ${includeBenefitsStipend ? "is-active" : ""}`}>
                 <span className="cost-model-toggle-copy">

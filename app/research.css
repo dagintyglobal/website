@@ -48,7 +48,7 @@
 .cost-model-toggle { display: flex; width: 100%; align-items: center; justify-content: space-between; gap: 14px; color: inherit; text-align: left; }
 .cost-model-toggle-copy { display: block; min-width: 0; }
 .cost-model-toggle-copy b, .cost-model-toggle-copy small { display: block; }
-.cost-model-toggle-copy b { font-size: 11px; }
+.cost-model-toggle-copy b { font-size: 14px; }
 .pricing-note .calculator-tooltip-button { color: var(--acid); }
 .pricing-note .calculator-tooltip-button:hover, .pricing-note .calculator-tooltip-button:focus-visible, .pricing-note .calculator-tooltip-button[aria-expanded="true"] { color: var(--ink); border-color: var(--acid); background: var(--acid); }
 .cost-model-toggle-copy small { max-width: 220px; margin-top: 4px; color: #aeb9ca; font-size: 11px; line-height: 1.4; }
