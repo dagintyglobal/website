@@ -40,3 +40,32 @@ test("server-renders the Dāginty Research Lab with the whitepaper as default", 
   assert.match(html, /Whitepaper/);
   assert.match(html, /ROI Calculator/);
 });
+
+test("server-renders the individual and employee landing page", async () => {
+  const response = await render("/individual");
+  assert.equal(response.status, 200);
+  const html = await response.text();
+  assert.match(html, /Practical data wellness for individuals and employees/);
+  assert.match(html, /Control your digital life/);
+  assert.match(html, /Keep your data in your hands/);
+  assert.match(html, /Your information should not become someone else/);
+  assert.doesNotMatch(html, /One practical loop/);
+  assert.match(html, /Join the Cluzy waitlist/);
+  assert.match(html, /requesting the service from your employer/);
+  assert.match(html, /contact\?intent=waitlist/);
+  assert.match(html, /research\?view=whitepaper/);
+  assert.doesNotMatch(html, /<a href="\/">Dāginty home<\/a>/);
+  assert.doesNotMatch(html, /<a href="\/data-wellness">Data Wellness<\/a>/);
+  assert.doesNotMatch(html, /<a href="\/privacy">Privacy Policy<\/a>/);
+  assert.doesNotMatch(html, /<a href="\/terms">Terms of use<\/a>/);
+  assert.match(html, /<a href="\/"><strong>A Dāginty Product<\/strong><\/a>/);
+});
+
+test("server-renders the individual waitlist coming-soon state", async () => {
+  const response = await render("/contact?intent=waitlist");
+  assert.equal(response.status, 200);
+  const html = await response.text();
+  assert.match(html, /The Cluzy waitlist is coming soon/);
+  assert.match(html, /instructions for requesting the service from their employer/);
+  assert.match(html, /Explore data wellness/);
+});
