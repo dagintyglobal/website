@@ -71,8 +71,9 @@ test("server-renders the individual waitlist coming-soon state", async () => {
   assert.match(html, /Explore data wellness/);
 });
 
-test("the individual outlined headline uses the bundled Inter font", async () => {
+test("the individual outlined headline uses the live Cluzy font chain", async () => {
   const css = await readFile(new URL("../app/individual/individual.css", import.meta.url), "utf8");
   const headlineRule = css.match(/\.individual-hero h1\s*\{[^}]+\}/s)?.[0] ?? "";
-  assert.match(headlineRule, /font-family:\s*var\(--font-sans\)/);
+  assert.match(headlineRule, /font-family:\s*"Cluzy Live Inter",\s*"Helvetica Neue",\s*Arial,\s*sans-serif/);
+  assert.doesNotMatch(headlineRule, /var\(--font-sans\)/);
 });

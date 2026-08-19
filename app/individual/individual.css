@@ -1,3 +1,13 @@
+/* Match the live Cluzy landing-page font chain without resolving to the
+   separate bundled Inter face used by the Dāginty application shell. */
+@font-face {
+  font-family: "Cluzy Live Inter";
+  src: local("Inter");
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+}
+
 .individual-landing {
   position: relative;
   overflow: hidden;
@@ -120,7 +130,7 @@
 .individual-hero h1 {
   max-width: 800px;
   margin: 0;
-  font-family: var(--font-sans), Inter, "Helvetica Neue", Arial, sans-serif;
+  font-family: "Cluzy Live Inter", "Helvetica Neue", Arial, sans-serif;
   font-size: clamp(54px, 6.2vw, 94px);
   font-weight: 900;
   letter-spacing: -0.065em;
