@@ -45,7 +45,7 @@ const foundations = [
   },
   {
     number: "02",
-    title: "Cleanse with purpose.",
+    title: "Reduce unwanted exposure.",
     text: "Choose practical cleanup and removal actions that reduce unwanted exposure while keeping every decision in your hands.",
     signal: "Practical control",
   },
@@ -127,7 +127,7 @@ export default function IndividualLandingPage() {
                 Browsing activity, device behavior, location patterns, purchased lists and people finder services can be used to make assumptions you never knowingly provided. You deserve clarity about how your information is used—and a meaningful role in deciding what happens next.
               </p>
               <div className="individual-thesis-proof">
-                <span>WHAT DATA WELLNESS CHANGES</span>
+                <span>WHAT DATA WELLNESS GIVES YOU</span>
                 <strong>CONTROL</strong>
                 <p>Understand what is exposed, choose what to address, and keep your data in your hands.</p>
               </div>
@@ -137,7 +137,7 @@ export default function IndividualLandingPage() {
 
         <section className="individual-foundations" id="data-wellness">
           <div className="individual-section-heading">
-            <p className="individual-eyebrow individual-eyebrow--bright">Three foundations for healthier data</p>
+            <p className="individual-eyebrow individual-eyebrow--bright">Three foundations of data wellness</p>
             <h2>Turn personal-data exposure into practical action.</h2>
           </div>
           <div className="individual-foundation-grid">
@@ -155,7 +155,7 @@ export default function IndividualLandingPage() {
         <section className="individual-closing">
           <div>
             <p className="individual-eyebrow individual-eyebrow--bright">Your data. Your decisions.</p>
-            <h2>Build a healthier relationship with your digital life.</h2>
+            <h2>Build data wellness <span>into your digital life.</span></h2>
             <p className="individual-closing-deck">
               Join the Cluzy waitlist and we&apos;ll also send you simple instructions for requesting the service from your employer.
             </p>
