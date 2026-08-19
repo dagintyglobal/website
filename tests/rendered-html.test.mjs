@@ -1,4 +1,5 @@
 import assert from "node:assert/strict";
+import { readFile } from "node:fs/promises";
 import test from "node:test";
 
 async function render(path = "/") {
@@ -68,4 +69,10 @@ test("server-renders the individual waitlist coming-soon state", async () => {
   assert.match(html, /The Cluzy waitlist is coming soon/);
   assert.match(html, /instructions for requesting the service from their employer/);
   assert.match(html, /Explore data wellness/);
+});
+
+test("the individual outlined headline uses the bundled Inter font", async () => {
+  const css = await readFile(new URL("../app/individual/individual.css", import.meta.url), "utf8");
+  const headlineRule = css.match(/\.individual-hero h1\s*\{[^}]+\}/s)?.[0] ?? "";
+  assert.match(headlineRule, /font-family:\s*var\(--font-sans\)/);
 });
