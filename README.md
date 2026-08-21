@@ -1,8 +1,14 @@
-# vinext-starter
+# Dāginty website
 
-A clean full-stack starter running on
-[vinext](https://github.com/cloudflare/vinext), with optional Cloudflare D1 and
-Drizzle support.
+Source for the Dāginty website and its Sites-hosted staging deployment.
+
+## Current site
+
+- Staging: https://daginty-staging.pete887281.chatgpt.site
+- Primary routes include the homepage, Products, Partners, Services, Data
+  Wellness, Ecosystem, Research Lab, About, Contact, Legal, Privacy, Terms, and
+  the Individual/Employee landing page.
+- The Research Lab includes the whitepaper and interactive ROI calculator.
 
 ## Prerequisites
 
@@ -18,14 +24,21 @@ npm run build
 
 This starter does not use `wrangler.jsonc`.
 
-## Included Shape
+## Project structure
 
-- edit site code under `app/`
-- `.openai/hosting.json` declares optional Sites D1 and R2 bindings
-- `vite.config.ts` simulates declared bindings for local development
-- `db/schema.ts` starts intentionally empty
-- `examples/d1/` contains an optional D1 example surface
-- `drizzle.config.ts` supports local migration generation when needed
+- Site routes and styles live under `app/`.
+- Brand, team, document, and social-preview assets live under `public/`.
+- `tests/` contains rendered-page checks.
+- `.openai/hosting.json` contains the current owner's Sites project binding.
+
+## Sites handoff
+
+The committed Sites project ID identifies the existing staging deployment; it
+is not an authentication credential. A new owner working from another ChatGPT
+workspace should create a new Sites project in that workspace and replace the
+project binding before publishing. The new owner can then connect
+`staging.daginty.com` as the custom domain and use the DNS record provided by
+Sites.
 
 ## Workspace Auth Headers
 
