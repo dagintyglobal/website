@@ -1,0 +1,6 @@
+f1eddfbd3f1a6d1a78278f82b4df173af7672c0b62de659c2c6e01300f2d384f  assembled-sites/clarity-to-conversion.tar.gz
+7f085947e11873ca77a73a02e4e86312c2827d47397cd4687bdc46f2c2ea8352  assembled-sites/cluzy-data-wellness.tar.gz
+a60ea4abefc59f02aeb6484c99e5fd72e5e097ffbff8a04e7b51582a442641a5  assembled-sites/cluzy-delivery-model.tar.gz
+8964758353d8b17928dc43992350dcd0b1d2ae8690b7c4fe07d174121838f71a  assembled-sites/daginty-cluzy.tar.gz
+e81c0995c5b85589c998117ecfb21b869b9c5ec0ab7ec9987bef291da71eafdc  assembled-sites/daginty-website.tar.gz
+9d3dbc263804bcb351141fd9a8b59b8193a3ffbe46ce0a62a7b6c79c5113ac21  assembled-sites/meet-cluzy.tar.gz

@@ -2,6 +2,10 @@
 
 Source for the Dāginty website and its Sites-hosted staging deployment.
 
+## Complete digital handoff
+
+The [handoff package](handoff/README.md) contains verified source archives for all six public Dāginty and Cluzy sites, deployment instructions, checksums, and the [ownership-transfer checklist](handoff/OWNERSHIP-TRANSFER.md) for ChatGPT Sites, Canva, Substack, domains and other company assets.
+
 ## Current site
 
 - Staging: https://daginty-staging.pete887281.chatgpt.site
