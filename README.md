@@ -9,6 +9,8 @@ Source for the Dāginty website and its Sites-hosted staging deployment.
   Wellness, Ecosystem, Research Lab, About, Contact, Legal, Privacy, Terms, and
   the Individual/Employee landing page.
 - The Research Lab includes the whitepaper and interactive ROI calculator.
+- Related Cluzy and Dāginty properties are tracked in
+  [docs/cluzy-daginty-sites.md](docs/cluzy-daginty-sites.md).
 
 ## Prerequisites
 
